@@ -12,6 +12,12 @@ const Banner = (props) => {
         (page) => agent.Items.byTitle(term, page),
         agent.Items.byTitle(term)
       );
+    } else {
+      props.onSearchInput(
+        term,
+        (page) => agent.Items.all(page),
+        agent.Items.all()
+      );
     }
   }
 
@@ -23,13 +29,12 @@ const Banner = (props) => {
           <span>A place to </span>
           <span id="get-part">get</span>
           <span>
-            <form style={{borderRadius: "5px", margin: "10px", background: "white", width: "40%", display: "inline-block"}}>
+            <form style={{borderRadius: "5px", margin: "10px", background: "white", width: "365px", display: "inline-block"}}>
               <input
                 onInput={handleSearch}
                 type="search"
                 placeholder="What is it that you truly desire?"
                 style={{
-                  // border: "1px solid #555",
                   width: "100%",
                   margin: 0,
                   padding: "9px 50px 9px 10px",
