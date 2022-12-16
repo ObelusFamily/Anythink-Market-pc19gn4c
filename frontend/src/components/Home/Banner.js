@@ -31,6 +31,7 @@ const Banner = (props) => {
           <span>
             <form style={{borderRadius: "5px", margin: "10px", background: "white", width: "365px", display: "inline-block"}}>
               <input
+                id="search-box"
                 onInput={handleSearch}
                 type="search"
                 placeholder="What is it that you truly desire?"
