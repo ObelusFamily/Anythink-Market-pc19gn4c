@@ -61,6 +61,7 @@ const Banner = (props) => {
                 type="search"
                 placeholder="What is it that you truly desire?"
                 style={{
+                  display: isSearchBarVisible ? "inline" : "none",
                   width: "100%",
                   margin: 0,
                   padding: "9px 50px 9px 10px",
