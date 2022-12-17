@@ -51,6 +51,7 @@ const reducer = (state = {}, action) => {
         return {
           ...state,
           pager: action.pager,
+          term: action.term,
           items: action.payload.items,
           itemsCount: action.payload.itemsCount,
           tab: null,
