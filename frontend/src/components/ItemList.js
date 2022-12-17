@@ -6,7 +6,7 @@ const ItemList = (props) => {
   if (!props.items) {
     return <div className="py-4">Loading...</div>;
   }
-  if (props.items.length === 0) {
+  if (props.items.length === 0 && props.term && props.term.length > 0) {
     return (
       <div
         id="empty"
@@ -21,8 +21,10 @@ const ItemList = (props) => {
           border: "10px",
         }}
       >
-        <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/sad.png"/>
-        <div style={{margin: "10px"}}>No items found for "<b>{props.term}</b>".</div>
+        <img src="https://img.icons8.com/pastel-glyph/64/FFFFFF/sad.png" />
+        <div style={{ margin: "10px" }}>
+          No items found for "<b>{props.term}</b>".
+        </div>
       </div>
     );
   }
