@@ -49,7 +49,9 @@ class Item extends React.Component {
             <div className="col-6">
               <img
                 src={
-                  this.props.item.image && this.props.item.image > 0
+                  this.props.item.image &&
+                  (this.props.item.image !== "placeholder.png" ||
+                    this.props.item.image.length > 0)
                     ? this.props.item.image
                     : process.env.PUBLIC_URL + "/placeholder.png"
                 }

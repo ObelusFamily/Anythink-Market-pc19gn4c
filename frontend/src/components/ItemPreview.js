@@ -38,7 +38,8 @@ const ItemPreview = (props) => {
       <img
         alt="item"
         src={
-          item.image && item.image.length > 0
+          item.image &&
+          (item.image !== "placeholder.png" || item.image.length > 0)
             ? item.image
             : process.env.PUBLIC_URL + "/placeholder.png"
         }
